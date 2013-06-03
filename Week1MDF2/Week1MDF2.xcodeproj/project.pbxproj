@@ -18,6 +18,7 @@
 		11A8378E175CE27800707BEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A8378D175CE27800707BEA /* Default-568h@2x.png */; };
 		11A83791175CE27800707BEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A83790175CE27800707BEA /* ViewController.m */; };
 		11A83794175CE27900707BEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A83792175CE27900707BEA /* ViewController.xib */; };
+		11A8379B175CE2B300707BEA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A8379A175CE2B300707BEA /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		11A8378F175CE27800707BEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		11A83790175CE27800707BEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11A83793175CE27900707BEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		11A8379A175CE2B300707BEA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A8379B175CE2B300707BEA /* Accounts.framework in Frameworks */,
 				11A83778175CE27800707BEA /* UIKit.framework in Frameworks */,
 				11A8377A175CE27800707BEA /* Foundation.framework in Frameworks */,
 				11A8377C175CE27800707BEA /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +76,7 @@
 		11A83776175CE27800707BEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11A8379A175CE2B300707BEA /* Accounts.framework */,
 				11A83777175CE27800707BEA /* UIKit.framework */,
 				11A83779175CE27800707BEA /* Foundation.framework */,
 				11A8377B175CE27800707BEA /* CoreGraphics.framework */,
