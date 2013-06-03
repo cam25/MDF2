@@ -19,6 +19,9 @@
 		11A83791175CE27800707BEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A83790175CE27800707BEA /* ViewController.m */; };
 		11A83794175CE27900707BEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A83792175CE27900707BEA /* ViewController.xib */; };
 		11A8379B175CE2B300707BEA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A8379A175CE2B300707BEA /* Accounts.framework */; };
+		11A8379D175CE9B700707BEA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A8379C175CE9B700707BEA /* Social.framework */; };
+		11A837A0175CF5BA00707BEA /* CustomCellControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A8379F175CF5BA00707BEA /* CustomCellControllerCell.m */; };
+		11A837A2175CF5CF00707BEA /* CustomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A837A1175CF5CF00707BEA /* CustomCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		11A83790175CE27800707BEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11A83793175CE27900707BEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		11A8379A175CE2B300707BEA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		11A8379C175CE9B700707BEA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		11A8379E175CF5BA00707BEA /* CustomCellControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellControllerCell.h; sourceTree = "<group>"; };
+		11A8379F175CF5BA00707BEA /* CustomCellControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellControllerCell.m; sourceTree = "<group>"; };
+		11A837A1175CF5CF00707BEA /* CustomCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A8379D175CE9B700707BEA /* Social.framework in Frameworks */,
 				11A8379B175CE2B300707BEA /* Accounts.framework in Frameworks */,
 				11A83778175CE27800707BEA /* UIKit.framework in Frameworks */,
 				11A8377A175CE27800707BEA /* Foundation.framework in Frameworks */,
@@ -76,6 +84,7 @@
 		11A83776175CE27800707BEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11A8379C175CE9B700707BEA /* Social.framework */,
 				11A8379A175CE2B300707BEA /* Accounts.framework */,
 				11A83777175CE27800707BEA /* UIKit.framework */,
 				11A83779175CE27800707BEA /* Foundation.framework */,
@@ -93,6 +102,9 @@
 				11A83790175CE27800707BEA /* ViewController.m */,
 				11A83792175CE27900707BEA /* ViewController.xib */,
 				11A8377E175CE27800707BEA /* Supporting Files */,
+				11A8379E175CF5BA00707BEA /* CustomCellControllerCell.h */,
+				11A8379F175CF5BA00707BEA /* CustomCellControllerCell.m */,
+				11A837A1175CF5CF00707BEA /* CustomCellView.xib */,
 			);
 			path = Week1MDF2;
 			sourceTree = "<group>";
@@ -167,6 +179,7 @@
 				11A8378C175CE27800707BEA /* Default@2x.png in Resources */,
 				11A8378E175CE27800707BEA /* Default-568h@2x.png in Resources */,
 				11A83794175CE27900707BEA /* ViewController.xib in Resources */,
+				11A837A2175CF5CF00707BEA /* CustomCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +193,7 @@
 				11A83784175CE27800707BEA /* main.m in Sources */,
 				11A83788175CE27800707BEA /* AppDelegate.m in Sources */,
 				11A83791175CE27800707BEA /* ViewController.m in Sources */,
+				11A837A0175CF5BA00707BEA /* CustomCellControllerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
