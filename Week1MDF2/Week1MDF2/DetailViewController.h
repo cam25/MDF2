@@ -13,8 +13,7 @@ typedef void (^CloseHandler)(NSDictionary*);
 {
     IBOutlet UIImageView *profileImage;
     IBOutlet UILabel *name;
-    IBOutlet UILabel *followers;
-    IBOutlet UILabel *friends;
+  
     IBOutlet UILabel *createdOn;
     IBOutlet UITextView *tweetText;
     CloseHandler handler;
@@ -23,8 +22,6 @@ typedef void (^CloseHandler)(NSDictionary*);
 -(IBAction)backClick:(id)sender;
 @property (nonatomic,strong) CloseHandler handler;
 @property (nonatomic,strong) UILabel *name;
-@property (nonatomic, strong) UILabel *followers;
-@property (nonatomic, strong) UILabel *friends;
 @property (nonatomic, strong) UILabel *createdOn;
 @property (nonatomic, strong) UITextView *tweetText;
 @property (nonatomic, strong) UIImageView *profileImage;
