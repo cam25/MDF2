@@ -12,6 +12,9 @@
 {
     NSArray *twitterFeed;
     IBOutlet UITableView *twitterTableView;
+    NSDictionary *tweetDictionary;
+    
 }
-
+-(IBAction)onClick:(id)sender;
+@property (nonatomic,strong) NSDictionary *tweetDictionary;
 @end

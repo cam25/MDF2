@@ -22,6 +22,9 @@
 		11A8379D175CE9B700707BEA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A8379C175CE9B700707BEA /* Social.framework */; };
 		11A837A0175CF5BA00707BEA /* CustomCellControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A8379F175CF5BA00707BEA /* CustomCellControllerCell.m */; };
 		11A837A2175CF5CF00707BEA /* CustomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A837A1175CF5CF00707BEA /* CustomCellView.xib */; };
+		11A837A4175D2EB600707BEA /* nats.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A837A3175D2EB600707BEA /* nats.png */; };
+		11A837A7175D3BD100707BEA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A837A6175D3BD100707BEA /* DetailViewController.m */; };
+		11A837A9175D3BE500707BEA /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A837A8175D3BE500707BEA /* DetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,10 @@
 		11A8379E175CF5BA00707BEA /* CustomCellControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellControllerCell.h; sourceTree = "<group>"; };
 		11A8379F175CF5BA00707BEA /* CustomCellControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellControllerCell.m; sourceTree = "<group>"; };
 		11A837A1175CF5CF00707BEA /* CustomCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellView.xib; sourceTree = "<group>"; };
+		11A837A3175D2EB600707BEA /* nats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nats.png; sourceTree = "<group>"; };
+		11A837A5175D3BD100707BEA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		11A837A6175D3BD100707BEA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		11A837A8175D3BE500707BEA /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +103,7 @@
 		11A8377D175CE27800707BEA /* Week1MDF2 */ = {
 			isa = PBXGroup;
 			children = (
+				11A837A3175D2EB600707BEA /* nats.png */,
 				11A83786175CE27800707BEA /* AppDelegate.h */,
 				11A83787175CE27800707BEA /* AppDelegate.m */,
 				11A8378F175CE27800707BEA /* ViewController.h */,
@@ -105,6 +113,9 @@
 				11A8379E175CF5BA00707BEA /* CustomCellControllerCell.h */,
 				11A8379F175CF5BA00707BEA /* CustomCellControllerCell.m */,
 				11A837A1175CF5CF00707BEA /* CustomCellView.xib */,
+				11A837A5175D3BD100707BEA /* DetailViewController.h */,
+				11A837A6175D3BD100707BEA /* DetailViewController.m */,
+				11A837A8175D3BE500707BEA /* DetailView.xib */,
 			);
 			path = Week1MDF2;
 			sourceTree = "<group>";
@@ -180,6 +191,8 @@
 				11A8378E175CE27800707BEA /* Default-568h@2x.png in Resources */,
 				11A83794175CE27900707BEA /* ViewController.xib in Resources */,
 				11A837A2175CF5CF00707BEA /* CustomCellView.xib in Resources */,
+				11A837A4175D2EB600707BEA /* nats.png in Resources */,
+				11A837A9175D3BE500707BEA /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +207,7 @@
 				11A83788175CE27800707BEA /* AppDelegate.m in Sources */,
 				11A83791175CE27800707BEA /* ViewController.m in Sources */,
 				11A837A0175CF5BA00707BEA /* CustomCellControllerCell.m in Sources */,
+				11A837A7175D3BD100707BEA /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,15 +10,18 @@
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 #import "CustomCellControllerCell.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
+@synthesize tweetDictionary;
 - (void)viewDidLoad
 {
+    
+    
     //ceates an account store instance
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     if (accountStore != nil) {
@@ -111,6 +114,9 @@
     return 0;
 }
 
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //creates custom cell controller
@@ -119,7 +125,7 @@
     
     if (cell != nil) {
         //creates variables to hold data pulled from twitter feed
-        NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
+        tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
         NSString *imageUrl = [[tweetDictionary objectForKey:@"user"] objectForKey:@"profile_image_url"];
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
         if (tweetDictionary != nil) {
@@ -136,6 +142,60 @@
     return nil;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailViewController *viewController = [[DetailViewController alloc]initWithNibName:@"DetailView" bundle:nil];
+    if (viewController != nil) {
+        
+        //creating dictionary for use on detail view.
+        NSDictionary *tweetData = [twitterFeed objectAtIndex:indexPath.row];
+        
+        //using dot syntax to access detail view
+        viewController.tweetDictionary = tweetData;
+         [self presentViewController:viewController animated:YES completion:nil];
+    }
+   
+    
+
+    
+}
+
+//on click of tool bar tabs
+-(IBAction)onClick:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    
+    //if refresh button is click execute the following code
+    if (button.tag == 0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Reloading Tweets" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+     
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        spinner.center = CGPointMake(139.5, 75.5); // .5 so it doesn't blur
+        [alertView addSubview:spinner];
+        [spinner startAnimating];
+        [alertView show];
+        
+        [twitterTableView reloadData];
+        [alertView dismissWithClickedButtonIndex:0 animated:YES];
+        
+        NSLog(@"refresh");
+    
+    //else if post button is clicked execute the post code
+    }else if (button.tag == 1)
+    {
+        //setting compose variable to compose controller for posting tweets
+        SLComposeViewController *slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        if (slComposeViewController != nil) {
+            
+            //methods for setting text in tweet and images
+            [slComposeViewController setInitialText:@"This is text"];
+            [slComposeViewController addImage:[UIImage imageNamed:@"nats.png"]];
+            [self presentViewController:slComposeViewController animated:true completion:nil];
+        }
+        NSLog(@"post");
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
