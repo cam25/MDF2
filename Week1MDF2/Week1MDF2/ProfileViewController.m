@@ -15,7 +15,7 @@
 @end
 
 @implementation ProfileViewController
-@synthesize createdOn,followers,friends,description,profileImage,tweetFeed;
+@synthesize createdOn,followers,friends,description,profileImage,tweetFeed,tweets;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,9 +28,14 @@
 
 - (void)viewDidLoad
 {
+    //variables which hold the data from my twitter dictionary
     NSString *nameText = [[tweetDictionary objectForKey:@"user"]objectForKey:@"name"];
     
+    NSString *descript = [[tweetDictionary objectForKey:@"user"]objectForKey:@"description"];
+    
     NSString *friendInfo = [[NSString alloc]initWithFormat:@"%@", [[tweetDictionary objectForKey:@"user"]objectForKey:@"friends_count"]];
+    
+    NSString *numTweets = [[NSString alloc] initWithFormat:@"%@",[[tweetDictionary objectForKey:@"user"] objectForKey:@"statuses_count"]];
     
     NSString *followersInfo = [[NSString alloc]initWithFormat:@"%@", [[tweetDictionary objectForKey:@"user"]objectForKey:@"followers_count"]];
     
@@ -38,10 +43,13 @@
     
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
     
+    //setting the twitter data to be displayed inside my labels
     friends.text = friendInfo;
     followers.text = followersInfo;
     name.text = nameText;
     profileImage.image = [UIImage imageWithData:data];
+    description.text = descript;
+    tweets.text = numTweets;
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.

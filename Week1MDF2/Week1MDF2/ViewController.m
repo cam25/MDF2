@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     
-    
+    //showTweets = NO;
     //ceates an account store instance
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     if (accountStore != nil) {
@@ -34,7 +34,7 @@
             //requests access based on if the user grants access via signing in to twitter on device
             [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
                 if (granted) {
-                    
+                    showTweets = YES;
                     //An array which holds the users twitter accounts.
                     NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountType];
                     if (twitterAccounts != nil) {
@@ -47,10 +47,10 @@
                             //NSString *timelineString = @"https://api.twitter.com/1.1/statuses/user_timeline.json";
                             
                             //string with format of timeline string for easier specificity of users tweets
-                            NSString *timelineString =[NSString stringWithFormat:@"%@?%@&%@",@"https://api.twitter.com/1.1/statuses/user_timeline.json",@"screen_name=camsw0rld",@"count=10"];
+                            NSString *timelineString = @"https://api.twitter.com/1.1/statuses/user_timeline.json";
                             //SLrequest for twitter
                             SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:timelineString] parameters:nil];
-                            
+                          
                             //sets the request to users current active twitter account
                             if (request != nil) {
                                 [request setAccount:currentAccount];
@@ -71,6 +71,7 @@
                                             
                                             NSLog(@"%@", [twitterFeed description]);
                                             
+                                            
                                         }
                                         
                                     }
@@ -87,8 +88,11 @@
                         
                     }
                     
-                }else
+                }else 
                 {
+                    
+                    showTweets = NO;
+                   // [self alert];
                     NSLog(@"User did not allow access");
                 }
                 
@@ -112,7 +116,7 @@
             //requests access based on if the user grants access via signing in to twitter on device
             [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
                 if (granted) {
-                    
+                    showTweets = YES;
                     //An array which holds the users twitter accounts.
                     NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountType];
                     if (twitterAccounts != nil) {
@@ -122,10 +126,10 @@
                         if (currentAccount != nil) {
                             
                             //twitter timeline api
-                            //NSString *timelineString = @"https://api.twitter.com/1.1/statuses/user_timeline.json";
+                            NSString *timelineString = @"https://api.twitter.com/1.1/statuses/user_timeline.json";
                             
                             //string with format of timeline string for easier specificity of users tweets
-                            NSString *timelineString =[NSString stringWithFormat:@"%@?%@&%@",@"https://api.twitter.com/1.1/statuses/user_timeline.json",@"screen_name=camsw0rld",@"count=10"];
+                            //NSString *timelineString =[NSString stringWithFormat:@"%@?%@&%@",@"https://api.twitter.com/1.1/statuses/user_timeline.json",@"screen_name=camsw0rld",@"count=10"];
                             //SLrequest for twitter
                             SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:timelineString] parameters:nil];
                             
@@ -165,8 +169,10 @@
                         
                     }
                     
-                }else
+                }else 
                 {
+                    showTweets = NO;
+                    [self alert];
                     NSLog(@"User did not allow access");
                 }
                 
@@ -290,10 +296,11 @@
     {
     ProfileViewController *profileViewController = [[ProfileViewController alloc]initWithNibName:@"ProfileView" bundle:nil];
         
-        //using dot syntax to access detail view
+        //setting tweet dictionary from my twitter feed
         NSDictionary *tweetDict = [twitterFeed objectAtIndex:0];
         if (tweetDict != nil) {
             
+            //passing dictionary to profile view
             profileViewController.tweetDictionary = tweetDict;
             [self presentViewController:profileViewController animated:YES completion:nil];
         }
@@ -301,11 +308,31 @@
     
     }
 }
+-(void)alert
+{
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Please add a twitter account to your device." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    
+        [alertView show];
+    
+
+
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (showTweets == NO) {
+        [self alert];
+    }
+    
+
+    
+}
+
 
 @end

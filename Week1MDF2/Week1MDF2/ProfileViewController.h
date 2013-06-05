@@ -11,11 +11,14 @@
 
 @interface ProfileViewController : ViewController
 {
+    //labels
     IBOutlet UILabel *name;
     IBOutlet UILabel *followers;
     IBOutlet UILabel *friends;
     IBOutlet UIImageView *profileImage;
     IBOutlet UILabel *description;
+    IBOutlet UILabel *tweets;
+    //dictionary
     NSDictionary *tweetFeed;
 }
 -(IBAction)backClick:(id)sender;
@@ -25,4 +28,5 @@
 @property (nonatomic, strong) UILabel *description;
 @property (nonatomic, strong) UIImageView *profileImage;
 @property (nonatomic, strong) NSDictionary *tweetFeed;
+@property (nonatomic, strong) UILabel *tweets;
 @end

@@ -14,7 +14,7 @@
 @end
 
 @implementation DetailViewController
-@synthesize name,tweetText,handler,createdOn,profileImage;
+@synthesize name,tweetText,handler,createdOn,profileImage,twtterHandle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,6 +42,7 @@
     NSString *date = [tweetDictionary objectForKey:@"created_at"];
     
     NSString *imageUrl = [[tweetDictionary objectForKey:@"user"]objectForKey:@"profile_image_url"];
+    NSString *handle = [[tweetDictionary objectForKey:@"user"]objectForKey:@"screen_name"];
     
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
     
@@ -52,6 +53,7 @@
     //followers.text = followersInfo;
     createdOn.text = [NSString stringWithFormat:@"Posted On: %@", [self dateFormat:date]];;
     profileImage.image = [UIImage imageWithData:data];
+    twitterHandle.text = [NSString stringWithFormat:@"@%@", handle];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.

@@ -13,7 +13,7 @@ typedef void (^CloseHandler)(NSDictionary*);
 {
     IBOutlet UIImageView *profileImage;
     IBOutlet UILabel *name;
-  
+    IBOutlet UILabel *twitterHandle;
     IBOutlet UILabel *createdOn;
     IBOutlet UITextView *tweetText;
     CloseHandler handler;
@@ -25,4 +25,5 @@ typedef void (^CloseHandler)(NSDictionary*);
 @property (nonatomic, strong) UILabel *createdOn;
 @property (nonatomic, strong) UITextView *tweetText;
 @property (nonatomic, strong) UIImageView *profileImage;
+@property (nonatomic, strong) UILabel *twtterHandle;
 @end
