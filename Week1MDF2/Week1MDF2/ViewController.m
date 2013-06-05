@@ -22,7 +22,6 @@
 - (void)viewDidLoad
 {
     
-    //showTweets = NO;
     //ceates an account store instance
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     if (accountStore != nil) {
@@ -34,7 +33,10 @@
             //requests access based on if the user grants access via signing in to twitter on device
             [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
                 if (granted) {
+                    
+                    //sets show tweets to yes if account is granted for toggling of alert
                     showTweets = YES;
+                    
                     //An array which holds the users twitter accounts.
                     NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountType];
                     if (twitterAccounts != nil) {
@@ -90,9 +92,9 @@
                     
                 }else 
                 {
-                    
+                    //sets show tweets to no if access is not granted to fire the alert
                     showTweets = NO;
-                   // [self alert];
+                   
                     NSLog(@"User did not allow access");
                 }
                 
@@ -116,7 +118,10 @@
             //requests access based on if the user grants access via signing in to twitter on device
             [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
                 if (granted) {
+                    
+                    //sets show tweets to yes if account is granted for toggling of alert
                     showTweets = YES;
+                    
                     //An array which holds the users twitter accounts.
                     NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountType];
                     if (twitterAccounts != nil) {
@@ -171,7 +176,10 @@
                     
                 }else 
                 {
+                    //sets show tweets to no if access is not granted to fire the alert
                     showTweets = NO;
+                    
+                    //call alert if no user account
                     [self alert];
                     NSLog(@"User did not allow access");
                 }
@@ -190,14 +198,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (twitterFeed != nil) {
-        
+        //returns amount of tweets to table view cells
         return [twitterFeed count];
     }
     return 0;
     
 }
+
+//date formatting
 - (NSString*)dateFormat:(NSString *)formatter
 {
+    
     NSString *newDate = formatter;
     
     NSDateFormatter *stringDate = [[NSDateFormatter alloc] init];
@@ -209,6 +220,7 @@
     
     newDate = [stringDate stringFromDate:date];
     
+    //returns new date format
     return newDate;
 }
 
@@ -310,6 +322,7 @@
 }
 -(void)alert
 {
+    //alert 
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Please add a twitter account to your device." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     
         [alertView show];
@@ -326,6 +339,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    //toggles the alert to show if the user has not entered an account once the view appears
     if (showTweets == NO) {
         [self alert];
     }

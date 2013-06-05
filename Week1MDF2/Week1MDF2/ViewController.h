@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
 {
+    //variables
     NSArray *twitterFeed;
     IBOutlet UITableView *twitterTableView;
     NSDictionary *tweetDictionary;
@@ -19,6 +20,7 @@
     
     
 }
+//actions,functions,properties
 -(IBAction)onClick:(id)sender;
 -(void)refreshTweets;
 -(void)alert;

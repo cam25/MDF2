@@ -34,10 +34,7 @@
     NSString *nameText = [[tweetDictionary objectForKey:@"user"]objectForKey:@"name"];
     
     NSString *tweet = [tweetDictionary objectForKey:@"text"];
-    
-   // NSString *friendInfo = [[NSString alloc]initWithFormat:@"%@", [[tweetDictionary objectForKey:@"user"]objectForKey:@"friends_count"]];
-    
-    //NSString *followersInfo = [[NSString alloc]initWithFormat:@"%@", [[tweetDictionary objectForKey:@"user"]objectForKey:@"followers_count"]];
+ 
     
     NSString *date = [tweetDictionary objectForKey:@"created_at"];
     
