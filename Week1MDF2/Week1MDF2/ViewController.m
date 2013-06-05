@@ -34,9 +34,9 @@
             [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
                 if (granted) {
                     
-                    //sets show tweets to yes if account is granted for toggling of alert
-                    showTweets = YES;
-                    
+                    //sets errorAlertToggle to yes if account is granted for toggling of the error alert
+                    errorAlertToggle = YES;
+                
                     //An array which holds the users twitter accounts.
                     NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountType];
                     if (twitterAccounts != nil) {
@@ -92,8 +92,8 @@
                     
                 }else 
                 {
-                    //sets show tweets to no if access is not granted to fire the alert
-                    showTweets = NO;
+                    //sets errorAlertToggle bool to no if access is not granted to fire the alert. (see ViewDidAppear function)
+                    errorAlertToggle = NO;
                    
                     NSLog(@"User did not allow access");
                 }
@@ -101,6 +101,7 @@
             }];
         }
     }
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -120,7 +121,7 @@
                 if (granted) {
                     
                     //sets show tweets to yes if account is granted for toggling of alert
-                    showTweets = YES;
+                    errorAlertToggle = YES;
                     
                     //An array which holds the users twitter accounts.
                     NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountType];
@@ -171,13 +172,14 @@
                         }
                         
                         //NSLog(@"%@", [twitterAccounts description]);
+                        [self alert2];
                         
                     }
                     
                 }else 
                 {
                     //sets show tweets to no if access is not granted to fire the alert
-                    showTweets = NO;
+                    errorAlertToggle = NO;
                     
                     //call alert if no user account
                     [self alert];
@@ -254,6 +256,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //set this bool to yes to toggle between showing and not showing of fetch alert once detail view is visited and back button is clicked.
+    fetchAlertToggle = YES;
+    
     DetailViewController *viewController = [[DetailViewController alloc]initWithNibName:@"DetailView" bundle:nil];
     if (viewController != nil) {
         
@@ -278,16 +283,12 @@
     //if refresh button is click execute the following code
     if (button.tag == 0)
     {
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Reloading Tweets" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
-     
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        spinner.center = CGPointMake(139.5, 75.5); 
-        [alertView addSubview:spinner];
-        [spinner startAnimating];
-        [alertView show];
+        //call for refresh alert
+        [self alert2];
         
+        //call for refresh
        [self refreshTweets];
-        [alertView dismissWithClickedButtonIndex:0 animated:YES];
+       
         
         NSLog(@"refresh");
     
@@ -306,6 +307,9 @@
         NSLog(@"post");
     }else if (button.tag == 2)
     {
+        //By setting this bool to yes in the profile view allows me to setup a condtion to view an alert when i want.
+        fetchAlertToggle = YES;
+        
     ProfileViewController *profileViewController = [[ProfileViewController alloc]initWithNibName:@"ProfileView" bundle:nil];
         
         //setting tweet dictionary from my twitter feed
@@ -330,6 +334,18 @@
 
 
 }
+-(void)alert2
+{
+    //alert
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Refreshing Tweets..." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    spinner.center = CGPointMake(139.5, 75.5);
+    [alertView addSubview:spinner];
+    [spinner startAnimating];
+    [alertView show];
+    [alertView dismissWithClickedButtonIndex:0 animated:YES];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -339,8 +355,24 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    // This condition is set so that once the user clicks profile button and then clicks the back button to return to the main table view the fetching tweets alert does not show. Respectfully so because going back does not refresh the tableview only onload or if the refresh button is clicked.
+    if (fetchAlertToggle == NO) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Fetching Tweets" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        spinner.center = CGPointMake(139.5, 75.5);
+        [alertView addSubview:spinner];
+        [spinner startAnimating];
+        [alertView show];
+        [alertView dismissWithClickedButtonIndex:0 animated:YES];
+        
+    }
+    
+    
+    
     //toggles the alert to show if the user has not entered an account once the view appears
-    if (showTweets == NO) {
+    if (errorAlertToggle == NO) {
         [self alert];
     }
     
