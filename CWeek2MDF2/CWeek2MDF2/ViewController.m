@@ -16,7 +16,7 @@
 @end
 
 @implementation ViewController
-@synthesize tweetDictionary,tweet,followerInfo;
+@synthesize tweetDictionary,tweet,twitterFeeds;
 - (void)viewDidLoad
 {
     UINib *nib = [UINib nibWithNibName:@"CustomCollectionCellView" bundle:nil];
@@ -68,13 +68,16 @@
                                         
                                         NSError *jsonError = nil;
                                         //parsing of twitter feed
-                                        followerInfo = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+                                        twitterFeeds = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
                                         
                                         //causes tableview to trigger a reload
                                         //[twitterTableView reloadData];
-                                        if (followerInfo != nil) {
+                                        if (twitterFeeds != nil) {
+                                            NSString *imageUrl = [[tweetDictionary objectForKey:@"user"] objectForKey:@"profile_image_url"];
                                             
-                                           NSLog(@"%@", [followerInfo description]);
+                                            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+                                            
+                                           NSLog(@"%@", [twitterFeeds description]);
                                             
                                             
                                         }
@@ -161,14 +164,14 @@
                                         
                                         NSError *jsonError = nil;
                                         //parsing of twitter feed
-                                        followerInfo = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+                                        twitterFeeds = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
                                         
                                         //causes tableview to trigger a reload
                                         //[twitterTableView reloadData];
-                                        if (followerInfo != nil) {
+                                        if (twitterFeeds != nil) {
                                             
                                             
-                                            NSLog(@"%@", [followerInfo description]);
+                                            NSLog(@"%@", [twitterFeeds description]);
                                             
                                             
                                         }

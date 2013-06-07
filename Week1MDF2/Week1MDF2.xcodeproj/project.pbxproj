@@ -27,6 +27,8 @@
 		11A837A9175D3BE500707BEA /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A837A8175D3BE500707BEA /* DetailView.xib */; };
 		11A837AC175DA0B400707BEA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A837AB175DA0B300707BEA /* ProfileViewController.m */; };
 		11A837AE175DA0CB00707BEA /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A837AD175DA0CB00707BEA /* ProfileView.xib */; };
+		11A838251762476900707BEA /* tweetIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838241762476900707BEA /* tweetIcon1.png */; };
+		11A838271762477600707BEA /* tweetIconRet.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838261762477600707BEA /* tweetIconRet.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		11A837AA175DA0B300707BEA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		11A837AB175DA0B300707BEA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		11A837AD175DA0CB00707BEA /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		11A838241762476900707BEA /* tweetIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweetIcon1.png; sourceTree = "<group>"; };
+		11A838261762477600707BEA /* tweetIconRet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweetIconRet.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		11A8376B175CE27800707BEA = {
 			isa = PBXGroup;
 			children = (
+				11A838261762477600707BEA /* tweetIconRet.png */,
+				11A838241762476900707BEA /* tweetIcon1.png */,
 				11A8377D175CE27800707BEA /* Week1MDF2 */,
 				11A83776175CE27800707BEA /* Frameworks */,
 				11A83775175CE27800707BEA /* Products */,
@@ -202,6 +208,8 @@
 				11A837A4175D2EB600707BEA /* nats.png in Resources */,
 				11A837A9175D3BE500707BEA /* DetailView.xib in Resources */,
 				11A837AE175DA0CB00707BEA /* ProfileView.xib in Resources */,
+				11A838251762476900707BEA /* tweetIcon1.png in Resources */,
+				11A838271762477600707BEA /* tweetIconRet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

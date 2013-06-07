@@ -11,7 +11,7 @@
 @interface ViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     IBOutlet UICollectionView *theCollectionView;
-     NSArray *followerInfo;
+     NSArray *twitterFeeds;
     NSDictionary *tweetDictionary;
    NSDictionary *tweet;
     NSArray *imageArray;
@@ -20,7 +20,7 @@
 -(void)getTweets;
 @property (nonatomic,strong) NSDictionary *tweetDictionary;
 @property (nonatomic,strong) NSDictionary *tweet;
-@property (nonatomic,strong)  NSArray *followerInfo;
+@property (nonatomic,strong)  NSArray *twitterFeeds;
 //@property (nonatomic,strong) NSDictionary *friendList;
 
 
