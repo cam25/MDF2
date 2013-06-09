@@ -12,12 +12,13 @@
 @implementation FollwerInfo
 @synthesize avatars,screenNames;
 
--(id)initWithTitle:(NSString *)names images:(UIImage *)profileImage
+-(id)initWithTitle:(NSString*)names images:(UIImage *)profileImage;
 {
     if ((self = [super init])) {
         
         avatars = profileImage;
         screenNames = names;
+        
       
     }
     return self;

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FollwerInfo.h"
 @interface CustomCollectionCell : UICollectionViewCell
 {
     IBOutlet UIImageView *backgroundImage;
     IBOutlet UILabel *twitterHandle;
 }
 -(void)refreshCellData:(UIImage*)image titleString:(NSString *)titleString;
+
+@property FollwerInfo *info;
+@property (nonatomic,strong) UIImageView *backgroundImage;
+@property (nonatomic,strong) UILabel *twitterHandle;
 @end

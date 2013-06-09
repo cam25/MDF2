@@ -10,7 +10,7 @@
 #import "ViewController.h"
 #import "FollwerInfo.h"
 @implementation CustomCollectionCell
-
+@synthesize backgroundImage,twitterHandle;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -19,10 +19,11 @@
     }
     return self;
 }
--(void)refreshCellData:(UIImage*)image titleString:(NSString *)titleString
+-(void)refreshCellData:(UIImage*)image titleString:(NSString *)names
 {
+    
     backgroundImage.image = image;
-    twitterHandle.text = titleString;
+    twitterHandle.text = names;
 }
 
 /*

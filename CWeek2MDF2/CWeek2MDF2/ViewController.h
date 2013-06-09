@@ -16,9 +16,14 @@
    NSDictionary *tweet;
     NSArray *imageArray;
     NSArray *labelArray;
+    NSArray *usersArray;
+    NSMutableArray *userStorage;
 }
--(void)getTweets;
+//-(void)getTweets;
+@property (nonatomic,strong) UIImageView *backgroundImage;
+@property (nonatomic,strong) UILabel *twitterHandle;
 @property (nonatomic,strong) NSDictionary *tweetDictionary;
+@property (nonatomic,strong) NSMutableArray *userStorage;
 @property (nonatomic,strong) NSDictionary *tweet;
 @property (nonatomic,strong)  NSArray *twitterFeeds;
 //@property (nonatomic,strong) NSDictionary *friendList;
