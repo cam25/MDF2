@@ -24,6 +24,8 @@
 		11A8381E176009CE00707BEA /* CustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A8381D176009CE00707BEA /* CustomCollectionCell.m */; };
 		11A838201760DE6E00707BEA /* nats.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A8381F1760DE6E00707BEA /* nats.png */; };
 		11A83823176106D700707BEA /* FollwerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A83822176106D700707BEA /* FollwerInfo.m */; };
+		11A8382A17654DB600707BEA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A8382917654DB600707BEA /* DetailViewController.m */; };
+		11A8382C17654DD400707BEA /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A8382B17654DD400707BEA /* DetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,9 @@
 		11A8381F1760DE6E00707BEA /* nats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nats.png; sourceTree = "<group>"; };
 		11A83821176106D600707BEA /* FollwerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollwerInfo.h; sourceTree = "<group>"; };
 		11A83822176106D700707BEA /* FollwerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollwerInfo.m; sourceTree = "<group>"; };
+		11A8382817654DB500707BEA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		11A8382917654DB600707BEA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		11A8382B17654DD400707BEA /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,9 @@
 				11A8381D176009CE00707BEA /* CustomCollectionCell.m */,
 				11A83821176106D600707BEA /* FollwerInfo.h */,
 				11A83822176106D700707BEA /* FollwerInfo.m */,
+				11A8382817654DB500707BEA /* DetailViewController.h */,
+				11A8382917654DB600707BEA /* DetailViewController.m */,
+				11A8382B17654DD400707BEA /* DetailView.xib */,
 			);
 			path = CWeek2MDF2;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 				11A838101760066A00707BEA /* ViewController.xib in Resources */,
 				11A8381B1760072300707BEA /* CustomCollectionCellView.xib in Resources */,
 				11A838201760DE6E00707BEA /* nats.png in Resources */,
+				11A8382C17654DD400707BEA /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +213,7 @@
 				11A8380D1760066A00707BEA /* ViewController.m in Sources */,
 				11A8381E176009CE00707BEA /* CustomCollectionCell.m in Sources */,
 				11A83823176106D700707BEA /* FollwerInfo.m in Sources */,
+				11A8382A17654DB600707BEA /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

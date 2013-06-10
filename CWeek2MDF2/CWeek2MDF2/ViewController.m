@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CustomCollectionCell.h"
 #import "FollwerInfo.h"
+#import "DetailViewController.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 @interface ViewController ()
@@ -255,6 +256,19 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(100.0f, 100.0f);
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailViewController *detailViewController = [[DetailViewController alloc]initWithNibName:@"DetailView" bundle:nil];
+    if (detailViewController != nil) {
+        
+        
+        FollwerInfo *info = [userStorage objectAtIndex:indexPath.row];
+        
+        detailViewController.info = info;
+       
+        [self presentViewController:detailViewController animated:YES completion:nil];
+    }
 }
 
 @end
