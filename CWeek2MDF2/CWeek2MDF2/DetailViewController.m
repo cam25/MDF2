@@ -28,7 +28,9 @@
 - (void)viewDidLoad
 {
   
-   
+    userImage.image = info.avatars;
+    userNameLabel.text = [NSString stringWithFormat:@"@%@",info.screenNames];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

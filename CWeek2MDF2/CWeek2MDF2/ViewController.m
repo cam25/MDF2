@@ -79,10 +79,13 @@
                                             
                                             //NSLog(@"%@",tweetDictionary);
                                             
+                                            //string variable storing all the images 
                                             NSString *imageUrl = [[usersArray objectAtIndex:i] objectForKey:@"profile_image_url"];
                                             
                                            // NSLog(@"%@",imageUrl);
                                             NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+                                            
+                                            //handle variable storing all the screen names
                                              NSString *handle = [[usersArray objectAtIndex:i]objectForKey:@"screen_name"];
                                             
                                             UIImage *avatar = [UIImage imageWithData:data];
@@ -223,12 +226,13 @@
 {
     CustomCollectionCell *cell = [theCollectionView dequeueReusableCellWithReuseIdentifier:@"CustomCollectionCellView" forIndexPath:indexPath];
     if (cell != nil) {
-        
-       
+    
       
         if (tweetDictionary !=nil) {
+            //info variable holding the users info
              FollwerInfo *info = [userStorage objectAtIndex:indexPath.row];
-        
+            
+        //used dot syntax to access the image/screennames from my followerinfo object
         [cell refreshCellData:info.avatars titleString:info.screenNames];
             //NSLog(@"%@",info);
         }

@@ -14,6 +14,7 @@
 {
     IBOutlet UIImageView *userImage;
     IBOutlet UILabel *userNameLabel;
+   
     FollwerInfo *info;
     
 }
