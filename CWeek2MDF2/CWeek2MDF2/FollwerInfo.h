@@ -10,9 +10,11 @@
 
 @interface FollwerInfo : NSObject
 {
+    //items being held within the object
     UIImage *avatars;
     NSString *screenNames;
 }
+//method
 -(id)initWithTitle:(NSString*)names images:(UIImage *)profileImage;
 
 @property (strong,nonatomic) UIImage *avatars;

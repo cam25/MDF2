@@ -16,6 +16,7 @@
 {
     if ((self = [super init])) {
         
+        //setters
         avatars = profileImage;
         screenNames = names;
         

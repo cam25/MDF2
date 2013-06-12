@@ -21,7 +21,7 @@
 }
 -(void)refreshCellData:(UIImage*)image titleString:(NSString *)names
 {
-    
+    //setting image/screename to variables for passing through views
     backgroundImage.image = image;
     twitterHandle.text = names;
 }

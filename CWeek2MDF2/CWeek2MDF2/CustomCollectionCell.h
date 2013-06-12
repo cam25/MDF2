@@ -10,9 +10,11 @@
 #import "FollwerInfo.h"
 @interface CustomCollectionCell : UICollectionViewCell
 {
+    //outlsets
     IBOutlet UIImageView *backgroundImage;
     IBOutlet UILabel *twitterHandle;
 }
+//method
 -(void)refreshCellData:(UIImage*)image titleString:(NSString *)titleString;
 
 @property FollwerInfo *info;

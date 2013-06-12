@@ -12,8 +12,10 @@
 #import "ViewController.h"
 @interface DetailViewController : UIViewController 
 {
+    //outlets 
     IBOutlet UIImageView *userImage;
     IBOutlet UILabel *userNameLabel;
+    
    
     FollwerInfo *info;
     

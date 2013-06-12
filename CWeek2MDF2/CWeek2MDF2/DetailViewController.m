@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
   
+    //grabbing the image/screename from follower info object via dot syntax with the setters from the object
     userImage.image = info.avatars;
     userNameLabel.text = [NSString stringWithFormat:@"@%@",info.screenNames];
     

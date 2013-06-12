@@ -18,8 +18,11 @@
     NSArray *labelArray;
     NSArray *usersArray;
     NSMutableArray *userStorage;
+    BOOL errorAlertToggle;
+    BOOL noConnectAlert;
 }
 //-(void)getTweets;
+-(void)alert;
 @property (nonatomic,strong) UIImageView *backgroundImage;
 @property (nonatomic,strong) UILabel *twitterHandle;
 @property (nonatomic,strong) NSDictionary *tweetDictionary;
