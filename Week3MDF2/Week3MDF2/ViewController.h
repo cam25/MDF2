@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    IBOutlet UIImageView *photoImageView;
+}
+-(IBAction)capture:(id)sender;
+-(IBAction)photoView:(id)sender;
+-(IBAction)videoRecord:(id)sender;
 @end

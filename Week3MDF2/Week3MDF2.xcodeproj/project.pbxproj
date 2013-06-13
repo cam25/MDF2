@@ -18,6 +18,9 @@
 		11A838581769655500707BEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838571769655500707BEA /* Default-568h@2x.png */; };
 		11A8385B1769655500707BEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A8385A1769655500707BEA /* ViewController.m */; };
 		11A8385E1769655500707BEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A8385C1769655500707BEA /* ViewController.xib */; };
+		11A83865176968F100707BEA /* ImageCapture.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A83864176968F100707BEA /* ImageCapture.png */; };
+		11A838671769717400707BEA /* photoAlbum.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838661769717300707BEA /* photoAlbum.png */; };
+		11A838691769735C00707BEA /* videoRecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838681769735C00707BEA /* videoRecord.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		11A838591769655500707BEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		11A8385A1769655500707BEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11A8385D1769655500707BEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		11A83864176968F100707BEA /* ImageCapture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageCapture.png; sourceTree = "<group>"; };
+		11A838661769717300707BEA /* photoAlbum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoAlbum.png; sourceTree = "<group>"; };
+		11A838681769735C00707BEA /* videoRecord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoRecord.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 		11A838471769655500707BEA /* Week3MDF2 */ = {
 			isa = PBXGroup;
 			children = (
+				11A838681769735C00707BEA /* videoRecord.png */,
+				11A838661769717300707BEA /* photoAlbum.png */,
+				11A83864176968F100707BEA /* ImageCapture.png */,
 				11A838501769655500707BEA /* AppDelegate.h */,
 				11A838511769655500707BEA /* AppDelegate.m */,
 				11A838591769655500707BEA /* ViewController.h */,
@@ -163,6 +172,9 @@
 				11A838561769655500707BEA /* Default@2x.png in Resources */,
 				11A838581769655500707BEA /* Default-568h@2x.png in Resources */,
 				11A8385E1769655500707BEA /* ViewController.xib in Resources */,
+				11A83865176968F100707BEA /* ImageCapture.png in Resources */,
+				11A838671769717400707BEA /* photoAlbum.png in Resources */,
+				11A838691769735C00707BEA /* videoRecord.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
