@@ -41,27 +41,27 @@
 -(IBAction)capture:(id)sender
 {
 
-    UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
-    if (pickerController != nil) {
+    UIImagePickerController *pickerController1 = [[UIImagePickerController alloc]init];
+    if (pickerController1 != nil) {
         
-        pickerController.sourceType = UIImagePickerControllerCameraCaptureModePhoto;
-        pickerController.delegate = self;
-        pickerController.allowsEditing = YES;
-        [self presentViewController:pickerController animated:YES completion:nil];
+        pickerController1.sourceType = UIImagePickerControllerCameraCaptureModePhoto;
+        pickerController1.delegate = self;
+        pickerController1.allowsEditing = YES;
+        [self presentViewController:pickerController1 animated:YES completion:nil];
     }
     
     
 }
 -(IBAction)photoView:(id)sender
 {
-    UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
-    if (pickerController != nil) {
+    UIImagePickerController *pickerController2 = [[UIImagePickerController alloc]init];
+    if (pickerController2 != nil) {
         
         
-        pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        pickerController.delegate = self;
-        pickerController.allowsEditing = NO;
-        [self presentViewController:pickerController animated:YES completion:nil];
+        pickerController2.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        pickerController2.delegate = self;
+        pickerController2.allowsEditing = NO;
+        [self presentViewController:pickerController2 animated:YES completion:nil];
     }
 }
 
@@ -69,13 +69,13 @@
 
 -(IBAction)videoRecord:(id)sender
 {
-    UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
-    if (pickerController != nil) {
+    UIImagePickerController *pickerController3 = [[UIImagePickerController alloc]init];
+    if (pickerController3 != nil) {
         
-        pickerController.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
-        pickerController.delegate = self;
-        pickerController.allowsEditing = NO;
-        [self presentViewController:pickerController animated:YES completion:nil];
+        pickerController3.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
+        pickerController3.delegate = self;
+        pickerController3.allowsEditing = NO;
+        [self presentViewController:pickerController3 animated:YES completion:nil];
     }
 }
 @end

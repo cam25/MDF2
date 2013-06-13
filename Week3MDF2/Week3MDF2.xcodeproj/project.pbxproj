@@ -21,6 +21,8 @@
 		11A83865176968F100707BEA /* ImageCapture.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A83864176968F100707BEA /* ImageCapture.png */; };
 		11A838671769717400707BEA /* photoAlbum.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838661769717300707BEA /* photoAlbum.png */; };
 		11A838691769735C00707BEA /* videoRecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838681769735C00707BEA /* videoRecord.png */; };
+		11A8386C176A03F800707BEA /* PhotoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A8386B176A03F800707BEA /* PhotoCaptureViewController.m */; };
+		11A8386E176A041000707BEA /* PhotoCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A8386D176A041000707BEA /* PhotoCaptureView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		11A83864176968F100707BEA /* ImageCapture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageCapture.png; sourceTree = "<group>"; };
 		11A838661769717300707BEA /* photoAlbum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoAlbum.png; sourceTree = "<group>"; };
 		11A838681769735C00707BEA /* videoRecord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoRecord.png; sourceTree = "<group>"; };
+		11A8386A176A03F800707BEA /* PhotoCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCaptureViewController.h; sourceTree = "<group>"; };
+		11A8386B176A03F800707BEA /* PhotoCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCaptureViewController.m; sourceTree = "<group>"; };
+		11A8386D176A041000707BEA /* PhotoCaptureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCaptureView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,9 @@
 				11A8385A1769655500707BEA /* ViewController.m */,
 				11A8385C1769655500707BEA /* ViewController.xib */,
 				11A838481769655500707BEA /* Supporting Files */,
+				11A8386A176A03F800707BEA /* PhotoCaptureViewController.h */,
+				11A8386B176A03F800707BEA /* PhotoCaptureViewController.m */,
+				11A8386D176A041000707BEA /* PhotoCaptureView.xib */,
 			);
 			path = Week3MDF2;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 				11A83865176968F100707BEA /* ImageCapture.png in Resources */,
 				11A838671769717400707BEA /* photoAlbum.png in Resources */,
 				11A838691769735C00707BEA /* videoRecord.png in Resources */,
+				11A8386E176A041000707BEA /* PhotoCaptureView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +197,7 @@
 				11A8384E1769655500707BEA /* main.m in Sources */,
 				11A838521769655500707BEA /* AppDelegate.m in Sources */,
 				11A8385B1769655500707BEA /* ViewController.m in Sources */,
+				11A8386C176A03F800707BEA /* PhotoCaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
