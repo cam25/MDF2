@@ -131,7 +131,13 @@
                 {
                     //sets errorAlertToggle bool to no if access is not granted to fire the alert. (see ViewDidAppear function)
                     errorAlertToggle = NO;
-                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Add Twitter Account" message:
+                                             @"Please add a twitter account on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                        [view show];
+                        
+                        
+                    });
                     NSLog(@"User did not allow access");
                 }
                 
@@ -214,14 +220,6 @@
     //informs the user to add a twitter account
     if (errorAlertToggle == NO) {
     
-        
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Please add a twitter account on your device." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        
-      
-        [alertView show];
-       
- 
-    }
     
    
 
@@ -229,7 +227,7 @@
 
 }
 
-
+}
 -(void)alert
 {
     //alert
