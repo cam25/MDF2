@@ -14,8 +14,6 @@
      NSArray *twitterFeeds;
     NSDictionary *tweetDictionary;
    NSDictionary *tweet;
-    NSArray *imageArray;
-    NSArray *labelArray;
     NSArray *usersArray;
     NSMutableArray *userStorage;
     BOOL errorAlertToggle;
