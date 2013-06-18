@@ -23,6 +23,7 @@
 		11A838691769735C00707BEA /* videoRecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A838681769735C00707BEA /* videoRecord.png */; };
 		11A8386C176A03F800707BEA /* PhotoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A8386B176A03F800707BEA /* PhotoCaptureViewController.m */; };
 		11A8386E176A041000707BEA /* PhotoCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A8386D176A041000707BEA /* PhotoCaptureView.xib */; };
+		11D526F21770DBB8009998EE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D526F11770DBB8009998EE /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		11A8386A176A03F800707BEA /* PhotoCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCaptureViewController.h; sourceTree = "<group>"; };
 		11A8386B176A03F800707BEA /* PhotoCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCaptureViewController.m; sourceTree = "<group>"; };
 		11A8386D176A041000707BEA /* PhotoCaptureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCaptureView.xib; sourceTree = "<group>"; };
+		11D526F11770DBB8009998EE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D526F21770DBB8009998EE /* MobileCoreServices.framework in Frameworks */,
 				11A838421769655500707BEA /* UIKit.framework in Frameworks */,
 				11A838441769655500707BEA /* Foundation.framework in Frameworks */,
 				11A838461769655500707BEA /* CoreGraphics.framework in Frameworks */,
@@ -84,6 +87,7 @@
 		11A838401769655500707BEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11D526F11770DBB8009998EE /* MobileCoreServices.framework */,
 				11A838411769655500707BEA /* UIKit.framework */,
 				11A838431769655500707BEA /* Foundation.framework */,
 				11A838451769655500707BEA /* CoreGraphics.framework */,
@@ -320,6 +324,7 @@
 				11A838631769655500707BEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

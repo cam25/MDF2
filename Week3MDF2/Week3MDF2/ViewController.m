@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface ViewController ()
 
@@ -31,6 +32,18 @@
     UIImage *selectedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if (selectedImage != nil) {
         photoImageView.image = selectedImage;
+       
+        
+        
+    }
+    
+    NSURL *urlstring = [info valueForKey:UIImagePickerControllerMediaURL];
+    if (urlstring != nil) {
+        
+        NSString *videoPath = [urlstring path];
+        NSLog(@"%@",videoPath);
+        
+        UISaveVideoAtPathToSavedPhotosAlbum(videoPath, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
     }
     
 }
@@ -44,13 +57,34 @@
     UIImagePickerController *pickerController1 = [[UIImagePickerController alloc]init];
     if (pickerController1 != nil) {
         
-        pickerController1.sourceType = UIImagePickerControllerCameraCaptureModePhoto;
+        pickerController1.sourceType = UIImagePickerControllerSourceTypeCamera;
         pickerController1.delegate = self;
         pickerController1.allowsEditing = YES;
         [self presentViewController:pickerController1 animated:YES completion:nil];
     }
     
     
+}
+
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error != nil) {
+        NSLog(@"Error saving file");
+        
+    }else {
+        NSLog(@"Save Successful");
+    }
+}
+
+ - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error != nil) {
+        
+        NSLog(@"Error Saving Image");
+        
+    }else {
+        NSLog(@"Image Saved");
+    }
 }
 -(IBAction)photoView:(id)sender
 {
@@ -63,6 +97,7 @@
         pickerController2.allowsEditing = NO;
         [self presentViewController:pickerController2 animated:YES completion:nil];
     }
+    [pickerController2 dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -75,7 +110,11 @@
         pickerController3.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
         pickerController3.delegate = self;
         pickerController3.allowsEditing = NO;
+        pickerController3.videoQuality = UIImagePickerControllerQualityTypeMedium;
+        
+        pickerController3.mediaTypes = [NSArray arrayWithObjects:(NSString*)kUTTypeMovie, nil];
         [self presentViewController:pickerController3 animated:YES completion:nil];
     }
 }
+
 @end
