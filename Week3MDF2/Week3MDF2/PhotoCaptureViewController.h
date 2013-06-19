@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface PhotoCaptureViewController : UIViewController
+{
+    IBOutlet UIImageView *ogImage;
+    IBOutlet UIImageView *scaleImage;
+    NSDictionary *photoData;
+    UIImage *originalPicture;
+    UIImage *scaledPicture;
+    
+}
 
+-(IBAction)onClick:(id)sender;
+@property (nonatomic,strong )NSDictionary *photoData;
 @end

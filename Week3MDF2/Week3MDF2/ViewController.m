@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PhotoCaptureViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
 @interface ViewController ()
@@ -28,14 +29,27 @@
 }
 -(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info
 {
+     [self dismissViewControllerAnimated:YES completion:^{
+    
+    PhotoCaptureViewController *photoCaptureView = [[PhotoCaptureViewController alloc]initWithNibName:@"PhotoCaptureView" bundle:nil];
+         
+         
     NSLog(@"%@",[info description]);
     UIImage *selectedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if (selectedImage != nil) {
+        
+      
         photoImageView.image = selectedImage;
+        
+        photoCaptureView.photoData = info;
+       
+        [self presentViewController:photoCaptureView animated:YES completion:nil];
+        
        
         
-        
     }
+         
+         
     
     NSURL *urlstring = [info valueForKey:UIImagePickerControllerMediaURL];
     if (urlstring != nil) {
@@ -45,7 +59,7 @@
         
         UISaveVideoAtPathToSavedPhotosAlbum(videoPath, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
     }
-    
+     }];
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
@@ -63,7 +77,7 @@
         [self presentViewController:pickerController1 animated:YES completion:nil];
     }
     
-    
+     
 }
 
 - (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
@@ -76,7 +90,25 @@
     }
 }
 
- - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+
+-(IBAction)photoView:(id)sender
+{
+    UIImagePickerController *pickerController2 = [[UIImagePickerController alloc]init];
+   
+    if (pickerController2 != nil) {
+        
+       
+        
+        pickerController2.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        pickerController2.delegate = self;
+        pickerController2.allowsEditing = YES;
+        [self presentViewController:pickerController2 animated:YES completion:nil];
+    }
+  
+    [pickerController2 dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {
     if (error != nil) {
         
@@ -86,21 +118,6 @@
         NSLog(@"Image Saved");
     }
 }
--(IBAction)photoView:(id)sender
-{
-    UIImagePickerController *pickerController2 = [[UIImagePickerController alloc]init];
-    if (pickerController2 != nil) {
-        
-        
-        pickerController2.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        pickerController2.delegate = self;
-        pickerController2.allowsEditing = NO;
-        [self presentViewController:pickerController2 animated:YES completion:nil];
-    }
-    [pickerController2 dismissViewControllerAnimated:YES completion:nil];
-}
-
-
 
 -(IBAction)videoRecord:(id)sender
 {
