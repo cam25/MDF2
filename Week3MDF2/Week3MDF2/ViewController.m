@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "PhotoCaptureViewController.h"
 #import "VideoCaptureViewController.h"
-#import "PhotoAlbumViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
 @interface ViewController ()
@@ -90,6 +89,7 @@
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
+    //dismisses on cancel
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 -(IBAction)capture:(id)sender

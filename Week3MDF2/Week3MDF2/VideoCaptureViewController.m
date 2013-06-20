@@ -25,12 +25,15 @@
 
 - (void)viewDidLoad
 {
-    
+    //url variable holding data passed from info object "media Url" on main view 
     NSURL *url = [videoData valueForKey:UIImagePickerControllerMediaURL];
     
+    //string holding the url path
     NSString *path = [url path];
     
+    //shows text in textfield
     videoText.text = path;
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -44,19 +47,23 @@
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = (UIButton *)sender;
-    
+    //cancel button
     if (button.tag == 0) {
         [self dismissViewControllerAnimated:YES completion:nil];
         NSLog(@"Cancel");
     }
+    //save button
     else if (button.tag == 1)
     {
-        
+        //url variable holding data passed from info object "media Url" on main view 
         NSURL *videoUrl = [videoData valueForKey:UIImagePickerControllerMediaURL];
         if (videoUrl != nil) {
             
+            
+            //string holding the url path
             NSString *pathOfVideo = [videoUrl path];
             
+            //saving of video to photo album
             UISaveVideoAtPathToSavedPhotosAlbum(pathOfVideo, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
         }
         //Save = YES;
@@ -71,8 +78,13 @@
 {
     if (error != nil) {
         
-        NSLog(@"Error");
+        //error alert
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:
+                              @"Error with video" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
     }
+    
+    //alert for saving
     else if (error == nil)
 {
     UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Saved" message:

@@ -10,8 +10,10 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
+    //outlet for image on main view
     IBOutlet UIImageView *photoImageView;
 }
+//actions for features
 -(IBAction)capture:(id)sender;
 -(IBAction)photoView:(id)sender;
 -(IBAction)videoRecord:(id)sender;

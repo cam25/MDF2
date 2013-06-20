@@ -10,6 +10,7 @@
 
 @interface VideoCaptureViewController : UIViewController
 {
+    //variables to hold data
     IBOutlet UITextView *videoText;
     NSDictionary *videoData;
     BOOL Save;

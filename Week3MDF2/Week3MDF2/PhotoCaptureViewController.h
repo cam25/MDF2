@@ -10,14 +10,22 @@
 
 @interface PhotoCaptureViewController : UIViewController
 {
+    
+    //variables to pass images into
     IBOutlet UIImageView *ogImage;
     IBOutlet UIImageView *scaleImage;
+    
+    //dictionary to hold data from main view
     NSDictionary *photoData;
+    
+    //images
     UIImage *originalPicture;
     UIImage *scaledPicture;
     
 }
 
 -(IBAction)onClick:(id)sender;
+
+//property
 @property (nonatomic,strong )NSDictionary *photoData;
 @end
