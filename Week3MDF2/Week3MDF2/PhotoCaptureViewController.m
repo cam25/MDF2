@@ -62,9 +62,29 @@
         
         // save the scaled image
         UIImageWriteToSavedPhotosAlbum(scaledPicture, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-        NSLog(@"save clicked");
+        
+       
     }
     
     
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error != nil)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:
+                              @"Error with image" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        // no errors, insert string into save log array
+       
+    }
+    if (error == nil)
+    {
+       
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Saved" message:
+                              @"Images Saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
 }
 @end
