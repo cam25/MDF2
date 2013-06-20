@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoCaptureViewController : UIViewController
+
+@interface PhotoCaptureViewController : UIViewController <UIAlertViewDelegate>
 {
     
     //variables to pass images into
@@ -17,6 +18,8 @@
     
     //dictionary to hold data from main view
     NSDictionary *photoData;
+    
+  
     
     //images
     UIImage *originalPicture;

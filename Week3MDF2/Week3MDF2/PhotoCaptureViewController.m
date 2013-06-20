@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad
 {
+ 
     //original picture variable holding the data that was passed from info object on main view to dictionary on this view
     originalPicture = [photoData objectForKey:@"UIImagePickerControllerOriginalImage"];
     
@@ -57,46 +58,59 @@
     UIButton *button = (UIButton *)sender;
     if (button.tag == 0) {
         
-        //alert shown once cancel clicked
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cancel" message:
-                              @"Cancelled Save" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
-        NSLog(@"CancelClicked");
+        NSLog(@"Back Clicked");
         
         //dismisses view
         [self dismissViewControllerAnimated:YES completion:nil];
         
     }else if (button.tag == 1)
     {
+        //an alert view prompt added to prompt the user if they want to save both the images 
+        UIAlertView *alertPrompt = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Are you sure you want to save both the Original image and the Scaled Image?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         
-        //saves the original image
-        UIImageWriteToSavedPhotosAlbum(originalPicture, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-        
-        // save the scaled image
-        UIImageWriteToSavedPhotosAlbum(scaledPicture, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-        
-       
+        [alertPrompt show];
     }
     
     
 }
+
+//set this up to allow the user to save after being prompted if they want to save or not 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //if no is clicked nothing will save
+    if (buttonIndex == 0)
+    {
+        NSLog(@"NO");
+        
+    } else if (buttonIndex == 1) //if yes is clicked save images
+    {
+        NSLog(@"YES");
+        //saves the original image
+        UIImageWriteToSavedPhotosAlbum(originalPicture, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        // save the scaled image
+        UIImageWriteToSavedPhotosAlbum(scaledPicture, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        
+        //success alert
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:
+                              @"Both Images were saved!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+}
+
 //when finished saving
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {
-    if (error != nil)
+    //if image is nil show error discription
+    if (image == nil)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:
-                              @"Error with image" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                              @"Error Saving images!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
-        // no errors, insert string into save log array
-       
-    }
-    if (error == nil)
-    {
-       //save alert
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Saved" message:
-                              @"Images Saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+        
+        NSLog(@"error %@", error.description);
+        
+    } else {
+        NSLog(@"Both Images saved!");
     }
 }
 @end
