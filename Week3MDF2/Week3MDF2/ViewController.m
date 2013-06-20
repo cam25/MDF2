@@ -70,13 +70,13 @@
     }
          
          //photoAlbum
-         PhotoAlbumViewController *photoAlbum = [[PhotoAlbumViewController alloc]initWithNibName:@"PhotoAlbumView" bundle:nil];
-         if (photoAlbum != nil) {
-             
-             photoAlbum.images = info;
-             
-             [self presentViewController:photoAlbum animated:YES completion:nil];
-         }
+//         PhotoAlbumViewController *photoAlbum = [[PhotoAlbumViewController alloc]initWithNibName:@"PhotoAlbumView" bundle:nil];
+//         if (photoAlbum != nil) {
+//             
+//             photoAlbum.images = info;
+//             
+//             [self presentViewController:photoAlbum animated:YES completion:nil];
+//         }
         
       
      }];
