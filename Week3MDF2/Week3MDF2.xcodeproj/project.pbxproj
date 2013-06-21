@@ -26,6 +26,10 @@
 		11D526F21770DBB8009998EE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D526F11770DBB8009998EE /* MobileCoreServices.framework */; };
 		11D526F517723567009998EE /* VideoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D526F417723567009998EE /* VideoCaptureViewController.m */; };
 		11D526F71772357D009998EE /* VideoCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D526F61772357D009998EE /* VideoCaptureView.xib */; };
+		11D526FE1773CF3D009998EE /* tweetIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D526FD1773CF3D009998EE /* tweetIcon1.png */; };
+		11D527001773CF46009998EE /* tweetIconRet.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D526FF1773CF46009998EE /* tweetIconRet.png */; };
+		11D527021773CF55009998EE /* tweetIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D527011773CF55009998EE /* tweetIcon1.png */; };
+		11D527041773CF5E009998EE /* tweetIconRet.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D527031773CF5E009998EE /* tweetIconRet.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		11D526F317723567009998EE /* VideoCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureViewController.h; sourceTree = "<group>"; };
 		11D526F417723567009998EE /* VideoCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCaptureViewController.m; sourceTree = "<group>"; };
 		11D526F61772357D009998EE /* VideoCaptureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCaptureView.xib; sourceTree = "<group>"; };
+		11D526FD1773CF3D009998EE /* tweetIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweetIcon1.png; sourceTree = "<group>"; };
+		11D526FF1773CF46009998EE /* tweetIconRet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweetIconRet.png; sourceTree = "<group>"; };
+		11D527011773CF55009998EE /* tweetIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweetIcon1.png; sourceTree = "<group>"; };
+		11D527031773CF5E009998EE /* tweetIconRet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweetIconRet.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,8 @@
 		11A838351769655500707BEA = {
 			isa = PBXGroup;
 			children = (
+				11D527031773CF5E009998EE /* tweetIconRet.png */,
+				11D527011773CF55009998EE /* tweetIcon1.png */,
 				11A838471769655500707BEA /* Week3MDF2 */,
 				11A838401769655500707BEA /* Frameworks */,
 				11A8383F1769655500707BEA /* Products */,
@@ -103,6 +113,8 @@
 		11A838471769655500707BEA /* Week3MDF2 */ = {
 			isa = PBXGroup;
 			children = (
+				11D526FF1773CF46009998EE /* tweetIconRet.png */,
+				11D526FD1773CF3D009998EE /* tweetIcon1.png */,
 				11A838681769735C00707BEA /* videoRecord.png */,
 				11A838661769717300707BEA /* photoAlbum.png */,
 				11A83864176968F100707BEA /* ImageCapture.png */,
@@ -197,6 +209,10 @@
 				11A838691769735C00707BEA /* videoRecord.png in Resources */,
 				11A8386E176A041000707BEA /* PhotoCaptureView.xib in Resources */,
 				11D526F71772357D009998EE /* VideoCaptureView.xib in Resources */,
+				11D526FE1773CF3D009998EE /* tweetIcon1.png in Resources */,
+				11D527001773CF46009998EE /* tweetIconRet.png in Resources */,
+				11D527021773CF55009998EE /* tweetIcon1.png in Resources */,
+				11D527041773CF5E009998EE /* tweetIconRet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
