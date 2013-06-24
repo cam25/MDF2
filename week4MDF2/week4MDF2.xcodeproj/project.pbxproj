@@ -18,6 +18,13 @@
 		11D5272817766E5E009998EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D5272717766E5E009998EE /* Default-568h@2x.png */; };
 		11D5272B17766E5E009998EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D5272A17766E5E009998EE /* ViewController.m */; };
 		11D5272E17766E5F009998EE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D5272C17766E5F009998EE /* ViewController.xib */; };
+		11D5273E17789CDB009998EE /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D5273D17789CDB009998EE /* CustomTableViewCell.m */; };
+		11D5274017789D71009998EE /* CustomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D5273F17789D71009998EE /* CustomCellView.xib */; };
+		11D527431778A32B009998EE /* MovieInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D527421778A32B009998EE /* MovieInfo.m */; };
+		11D527461778A34A009998EE /* TheaterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D527451778A34A009998EE /* TheaterInfo.m */; };
+		11D527481778DB0B009998EE /* theater1.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D527471778DB0B009998EE /* theater1.png */; };
+		11D5274A1778DB15009998EE /* theater2.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D527491778DB15009998EE /* theater2.png */; };
+		11D5274C1778DB1C009998EE /* theater3.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D5274B1778DB1B009998EE /* theater3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,16 @@
 		11D5272917766E5E009998EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		11D5272A17766E5E009998EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11D5272D17766E5F009998EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		11D5273C17789CDB009998EE /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		11D5273D17789CDB009998EE /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		11D5273F17789D71009998EE /* CustomCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellView.xib; sourceTree = "<group>"; };
+		11D527411778A32B009998EE /* MovieInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfo.h; sourceTree = "<group>"; };
+		11D527421778A32B009998EE /* MovieInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfo.m; sourceTree = "<group>"; };
+		11D527441778A34A009998EE /* TheaterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheaterInfo.h; sourceTree = "<group>"; };
+		11D527451778A34A009998EE /* TheaterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheaterInfo.m; sourceTree = "<group>"; };
+		11D527471778DB0B009998EE /* theater1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theater1.png; sourceTree = "<group>"; };
+		11D527491778DB15009998EE /* theater2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theater2.png; sourceTree = "<group>"; };
+		11D5274B1778DB1B009998EE /* theater3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theater3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +100,22 @@
 		11D5271717766E5E009998EE /* week4MDF2 */ = {
 			isa = PBXGroup;
 			children = (
+				11D5274B1778DB1B009998EE /* theater3.png */,
+				11D527491778DB15009998EE /* theater2.png */,
+				11D527471778DB0B009998EE /* theater1.png */,
 				11D5272017766E5E009998EE /* AppDelegate.h */,
 				11D5272117766E5E009998EE /* AppDelegate.m */,
 				11D5272917766E5E009998EE /* ViewController.h */,
 				11D5272A17766E5E009998EE /* ViewController.m */,
 				11D5272C17766E5F009998EE /* ViewController.xib */,
 				11D5271817766E5E009998EE /* Supporting Files */,
+				11D5273C17789CDB009998EE /* CustomTableViewCell.h */,
+				11D5273D17789CDB009998EE /* CustomTableViewCell.m */,
+				11D5273F17789D71009998EE /* CustomCellView.xib */,
+				11D527411778A32B009998EE /* MovieInfo.h */,
+				11D527421778A32B009998EE /* MovieInfo.m */,
+				11D527441778A34A009998EE /* TheaterInfo.h */,
+				11D527451778A34A009998EE /* TheaterInfo.m */,
 			);
 			path = week4MDF2;
 			sourceTree = "<group>";
@@ -163,6 +190,10 @@
 				11D5272617766E5E009998EE /* Default@2x.png in Resources */,
 				11D5272817766E5E009998EE /* Default-568h@2x.png in Resources */,
 				11D5272E17766E5F009998EE /* ViewController.xib in Resources */,
+				11D5274017789D71009998EE /* CustomCellView.xib in Resources */,
+				11D527481778DB0B009998EE /* theater1.png in Resources */,
+				11D5274A1778DB15009998EE /* theater2.png in Resources */,
+				11D5274C1778DB1C009998EE /* theater3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +207,9 @@
 				11D5271E17766E5E009998EE /* main.m in Sources */,
 				11D5272217766E5E009998EE /* AppDelegate.m in Sources */,
 				11D5272B17766E5E009998EE /* ViewController.m in Sources */,
+				11D5273E17789CDB009998EE /* CustomTableViewCell.m in Sources */,
+				11D527431778A32B009998EE /* MovieInfo.m in Sources */,
+				11D527461778A34A009998EE /* TheaterInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

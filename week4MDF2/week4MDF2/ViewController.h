@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView *mainTableView;
+    NSMutableArray *movies;
+    NSMutableArray *theaters;
 }
 
 @end
