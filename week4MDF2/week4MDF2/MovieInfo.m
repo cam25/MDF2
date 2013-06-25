@@ -37,8 +37,8 @@
     NSString* movieShowings = @"";
     
     if (movieTimes.count > 0) {
-        for (int i = 0; i < self.movieTimes.count; i++) {
-            NSString* showTime = [self.movieTimes objectAtIndex:i];
+        for (int i = 0; i < movieTimes.count; i++) {
+            NSString* showTime = [movieTimes objectAtIndex:i];
              movieShowings = [movieShowings stringByAppendingFormat:@"%@ ", showTime];
         }
     }

@@ -13,6 +13,8 @@
     IBOutlet UITableView *mainTableView;
     NSMutableArray *movies;
     NSMutableArray *theaters;
+    NSMutableArray *movies2;
+    NSMutableArray *movies3;
 }
 
 @end
