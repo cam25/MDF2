@@ -25,6 +25,8 @@
 		11D527481778DB0B009998EE /* theater1.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D527471778DB0B009998EE /* theater1.png */; };
 		11D5274A1778DB15009998EE /* theater2.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D527491778DB15009998EE /* theater2.png */; };
 		11D5274C1778DB1C009998EE /* theater3.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D5274B1778DB1B009998EE /* theater3.png */; };
+		11D5274F17791F4F009998EE /* CustomHeaderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D5274E17791F4F009998EE /* CustomHeaderLabel.m */; };
+		11D5275717794367009998EE /* CustomHeaderViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D5275617794367009998EE /* CustomHeaderViewView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		11D527471778DB0B009998EE /* theater1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theater1.png; sourceTree = "<group>"; };
 		11D527491778DB15009998EE /* theater2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theater2.png; sourceTree = "<group>"; };
 		11D5274B1778DB1B009998EE /* theater3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theater3.png; sourceTree = "<group>"; };
+		11D5274D17791F4E009998EE /* CustomHeaderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderLabel.h; sourceTree = "<group>"; };
+		11D5274E17791F4F009998EE /* CustomHeaderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderLabel.m; sourceTree = "<group>"; };
+		11D5275617794367009998EE /* CustomHeaderViewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeaderViewView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +121,9 @@
 				11D527421778A32B009998EE /* MovieInfo.m */,
 				11D527441778A34A009998EE /* TheaterInfo.h */,
 				11D527451778A34A009998EE /* TheaterInfo.m */,
+				11D5274D17791F4E009998EE /* CustomHeaderLabel.h */,
+				11D5274E17791F4F009998EE /* CustomHeaderLabel.m */,
+				11D5275617794367009998EE /* CustomHeaderViewView.xib */,
 			);
 			path = week4MDF2;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 				11D527481778DB0B009998EE /* theater1.png in Resources */,
 				11D5274A1778DB15009998EE /* theater2.png in Resources */,
 				11D5274C1778DB1C009998EE /* theater3.png in Resources */,
+				11D5275717794367009998EE /* CustomHeaderViewView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +219,7 @@
 				11D5273E17789CDB009998EE /* CustomTableViewCell.m in Sources */,
 				11D527431778A32B009998EE /* MovieInfo.m in Sources */,
 				11D527461778A34A009998EE /* TheaterInfo.m in Sources */,
+				11D5274F17791F4F009998EE /* CustomHeaderLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

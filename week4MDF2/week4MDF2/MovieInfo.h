@@ -20,7 +20,7 @@
 }
 
 -(id)initWithTitle:(NSString*)icon mshowTimes:(NSArray*)showTimes names:(NSString*)movieTitle trailer:(NSURL*)trailerMov theaterLoc:(TheaterInfo*)theater;
-
+- (NSString*)timesForMovies;
 @property(nonatomic,strong) NSString *movieIcon;
 @property(nonatomic,strong) NSArray *movieTimes;
 @property(nonatomic,strong) NSString *movieName;

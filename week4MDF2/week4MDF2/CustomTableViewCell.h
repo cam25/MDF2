@@ -11,11 +11,11 @@
 @interface CustomTableViewCell : UITableViewCell
 {
     IBOutlet UIImageView *movieImage;
-    IBOutlet UILabel *movieName;
+    IBOutlet UILabel *movieTitle;
     IBOutlet UILabel *movieTime;
 }
 @property(nonatomic,strong) UIImageView *movieImage;
-@property(nonatomic,strong) UILabel *movieName;
+@property(nonatomic,strong) UILabel *movieTitle;
 @property(nonatomic,strong) UILabel *movieTime;
 
 @end

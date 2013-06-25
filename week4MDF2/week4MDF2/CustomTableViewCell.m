@@ -9,7 +9,7 @@
 #import "CustomTableViewCell.h"
 
 @implementation CustomTableViewCell
-@synthesize movieImage,movieName,movieTime;
+@synthesize movieImage,movieTitle,movieTime;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

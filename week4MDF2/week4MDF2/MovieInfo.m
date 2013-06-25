@@ -31,4 +31,19 @@
     
 }
 
+//created method for setting of times for movies to be passed into cells via setting an empty string looping through the array of movie times and appending the string to the label.
+- (NSString*)timesForMovies
+{
+    NSString* movieShowings = @"";
+    
+    if (movieTimes.count > 0) {
+        for (int i = 0; i < self.movieTimes.count; i++) {
+            NSString* showTime = [self.movieTimes objectAtIndex:i];
+             movieShowings = [movieShowings stringByAppendingFormat:@"%@ ", showTime];
+        }
+    }
+    
+    return movieShowings;
+}
+
 @end
