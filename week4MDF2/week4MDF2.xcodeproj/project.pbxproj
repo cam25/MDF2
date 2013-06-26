@@ -27,6 +27,8 @@
 		11D5274C1778DB1C009998EE /* theater3.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D5274B1778DB1B009998EE /* theater3.png */; };
 		11D5274F17791F4F009998EE /* CustomHeaderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D5274E17791F4F009998EE /* CustomHeaderLabel.m */; };
 		11D5275717794367009998EE /* CustomHeaderViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D5275617794367009998EE /* CustomHeaderViewView.xib */; };
+		11D5275A177A99C6009998EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D52759177A99C4009998EE /* DetailViewController.m */; };
+		11D5275C177A9C21009998EE /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D5275B177A9C21009998EE /* DetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,9 @@
 		11D5274D17791F4E009998EE /* CustomHeaderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderLabel.h; sourceTree = "<group>"; };
 		11D5274E17791F4F009998EE /* CustomHeaderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderLabel.m; sourceTree = "<group>"; };
 		11D5275617794367009998EE /* CustomHeaderViewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeaderViewView.xib; sourceTree = "<group>"; };
+		11D52758177A99C4009998EE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		11D52759177A99C4009998EE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		11D5275B177A9C21009998EE /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,9 @@
 				11D5274D17791F4E009998EE /* CustomHeaderLabel.h */,
 				11D5274E17791F4F009998EE /* CustomHeaderLabel.m */,
 				11D5275617794367009998EE /* CustomHeaderViewView.xib */,
+				11D52758177A99C4009998EE /* DetailViewController.h */,
+				11D52759177A99C4009998EE /* DetailViewController.m */,
+				11D5275B177A9C21009998EE /* DetailView.xib */,
 			);
 			path = week4MDF2;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 				11D5274A1778DB15009998EE /* theater2.png in Resources */,
 				11D5274C1778DB1C009998EE /* theater3.png in Resources */,
 				11D5275717794367009998EE /* CustomHeaderViewView.xib in Resources */,
+				11D5275C177A9C21009998EE /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +229,7 @@
 				11D527431778A32B009998EE /* MovieInfo.m in Sources */,
 				11D527461778A34A009998EE /* TheaterInfo.m in Sources */,
 				11D5274F17791F4F009998EE /* CustomHeaderLabel.m in Sources */,
+				11D5275A177A99C6009998EE /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

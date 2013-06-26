@@ -15,6 +15,7 @@
     NSMutableArray *theaters;
     NSMutableArray *movies2;
     NSMutableArray *movies3;
+    NSMutableArray *allMovies;
 }
 
 @end

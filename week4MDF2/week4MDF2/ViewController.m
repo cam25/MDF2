@@ -11,6 +11,7 @@
 #import "TheaterInfo.h"
 #import "CustomTableViewCell.h"
 #import "CustomHeaderLabel.h"
+#import "DetailViewController.h"
 @interface ViewController ()
 
 @end
@@ -23,12 +24,20 @@
     movies = [[NSMutableArray alloc]init];
     movies2 = [[NSMutableArray alloc]init];
     movies3 = [[NSMutableArray alloc]init];
+    allMovies = [[NSMutableArray alloc]init];
+    //theater array
     theaters = [[NSMutableArray alloc]init];
+    
+    
+    /////////--Theater Objects
+    
     TheaterInfo *theater1 = [[TheaterInfo alloc]initWithTitle:@"Regal Hyattsville Royale 14" location:@"Hyattsvilee MD" image:[UIImage imageNamed:@"theater1.png"]];
     
     TheaterInfo *theater2 = [[TheaterInfo alloc]initWithTitle:@"AMC Magic Johnson Capital 12 " location:@"Largo MD" image:[UIImage imageNamed:@"theater2.png"]];
     
     TheaterInfo *theater3 = [[TheaterInfo alloc]initWithTitle:@"Academy 8" location:@"Greenbelt MD" image:[UIImage imageNamed:@"theater3.png"]];
+    
+    ////////--Movie Objects
     
     MovieInfo *movie1 = [[MovieInfo alloc]initWithTitle:@"http://trailers.apple.com/trailers/disney/monstersuniversity/images/poster.jpg" mshowTimes:[NSArray arrayWithObjects:@"1:30PM",@"3:30PM",@"4:20PM", nil] names:@"Monsters University" trailer:[NSURL URLWithString:@"http://trailers.apple.com/movies/disney/monstersuniversity/monstersuniversity-scaregames_r640s.mov"]theaterLoc:theater1];
     
@@ -82,6 +91,22 @@
     [movies3 addObject:movie14];
     [movies3 addObject:movie15];
     
+//    
+//    [allMovies addObject:movie1];
+//    [allMovies addObject:movie2];
+//    [allMovies addObject:movie3];
+//    [allMovies addObject:movie4];
+//    [allMovies addObject:movie5];
+//    [allMovies addObject:movie6];
+//    [allMovies addObject:movie7];
+//    [allMovies addObject:movie8];
+//    [allMovies addObject:movie9];
+//    [allMovies addObject:movie10];
+//    [allMovies addObject:movie11];
+//    [allMovies addObject:movie12];
+//    [allMovies addObject:movie13];
+//    [allMovies addObject:movie14];
+//    [allMovies addObject:movie15];
     
     
     
@@ -188,6 +213,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // NSInteger section = indexPath.row + (indexPath.section * 5);
+    DetailViewController *detailView = [[DetailViewController alloc]initWithNibName:@"DetailView" bundle:nil];
+    if (detailView != nil) {
+        
+     MovieInfo *info = [movies objectAtIndex:indexPath.row];
+     MovieInfo *info2 = [movies2 objectAtIndex:indexPath.row];
+     MovieInfo *info3 = [movies3 objectAtIndex:indexPath.row];
+        
+        if ([indexPath section] == 0) {
+            
+             detailView.movieDetails = info;
+        }else if ([indexPath section] == 1)
+        {
+            detailView.movieDetails = info2;
+        }else if ([indexPath section] == 2)
+        {
+            detailView.movieDetails = info3;
+        }
+       
+        
+        
+         [self presentViewController:detailView animated:YES completion:nil];
+        
+    }
     
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
