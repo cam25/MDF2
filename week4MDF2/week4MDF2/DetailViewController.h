@@ -18,6 +18,7 @@
 }
 
 -(IBAction)backClick:(id)sender;
+-(IBAction)trailerClick:(id)sender;
 @property (nonatomic,strong)MovieInfo *movieDetails;
 @property (nonatomic,strong)UIImageView *detailMovieImage;
 @property (nonatomic,strong)UILabel *detailMovieTitle;

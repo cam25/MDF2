@@ -59,7 +59,7 @@
     
     MovieInfo *movie9 = [[MovieInfo alloc]initWithTitle:@"http://trailers.apple.com/trailers/universal/fastfurious6/images/poster.jpg" mshowTimes:[NSArray arrayWithObjects:@"3:45PM",@"7:05PM",@"10:05PM", nil] names:@"Fast & Furious 6" trailer:[NSURL URLWithString:@"http://trailers.apple.com/movies/universal/fastandfurious6/fastandfurious6-musicmontage_r640s.mov"] theaterLoc:theater2];
     
-    MovieInfo *movie10 = [[MovieInfo alloc]initWithTitle:@"http://trailers.apple.com/trailers/disney/monstersuniversity/images/poster.jpg" mshowTimes:[NSArray arrayWithObjects:@"2:10PM",@"7:50PM", @"9:05PM", nil] names:@"Monsters University 3D" trailer:[NSURL URLWithString:@"http://trailers.apple.com/movies/disney/monstersuniversity/monsteruniversity-itallbeganhere_r640s.mov"] theaterLoc:theater2];
+    MovieInfo *movie10 = [[MovieInfo alloc]initWithTitle:@"http://trailers.apple.com/trailers/independent/adore/images/poster.jpg" mshowTimes:[NSArray arrayWithObjects:@"2:10PM",@"7:50PM", @"9:05PM", nil] names:@"Adore" trailer:[NSURL URLWithString:@"http://trailers.apple.com/movies/independent/adore/adore-tlr1_r640s.mov"] theaterLoc:theater2];
     
     
     MovieInfo *movie11 = [[MovieInfo alloc]initWithTitle:@"http://trailers.apple.com/trailers/universal/despicableme2/images/poster.jpg" mshowTimes:[NSArray arrayWithObjects:@"2:30PM",@"4:05PM",@"7:15PM", nil] names:@"Despicable Me 2" trailer:[NSURL URLWithString:@"http://trailers.apple.com/movies/universal/despicableme2/despicableme2-clip2_r640s.mov"] theaterLoc:theater3];
@@ -72,7 +72,9 @@
 
     MovieInfo *movie15 = [[MovieInfo alloc]initWithTitle:@"http://trailers.apple.com/trailers/wb/thehobbitthedesolationofsmaug/images/poster.jpg" mshowTimes:[NSArray arrayWithObjects:@"9:00AM",@"12:00PM",@"4:15PM", nil] names:@"Hobbit" trailer:[NSURL URLWithString:@"http://trailers.apple.com/movies/wb/thehobbit2/thehobbitdesolationofsmaug-tlr1_r640s.mov"] theaterLoc:theater3];
     
+    ///////////////-----
     
+    ///adding movies to arrays for each section
     [movies addObject:movie1];
     [movies addObject:movie2];
     [movies addObject:movie3];

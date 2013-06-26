@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "MovieInfo.h"
 #import "TheaterInfo.h"
+#import "TrailerViewController.h"
+#import "ViewController.h"
 @interface DetailViewController ()
 
 @end
@@ -43,14 +45,34 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(IBAction)trailerClick:(id)sender
+{
+    UIButton *button = (UIButton *)sender;
+    
+    if (button.tag == 1) {
+        
+        TrailerViewController *trailerView = [[TrailerViewController alloc]initWithNibName:@"TrailerView" bundle:nil];
+        if (trailerView != nil) {
+            
+            trailerView.movieDetails = movieDetails;
+           
+            [self presentViewController:trailerView animated:YES completion:nil];
+            
+        }
+    }
+}
+
 -(IBAction)backClick:(id)sender
 {
     UIButton *button = (UIButton *)sender;
+    
+   
     if (button.tag == 0) {
         
         // dismiss the view
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+   
 }
 
 @end

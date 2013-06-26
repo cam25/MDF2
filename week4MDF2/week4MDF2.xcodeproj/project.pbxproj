@@ -29,6 +29,9 @@
 		11D5275717794367009998EE /* CustomHeaderViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D5275617794367009998EE /* CustomHeaderViewView.xib */; };
 		11D5275A177A99C6009998EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D52759177A99C4009998EE /* DetailViewController.m */; };
 		11D5275C177A9C21009998EE /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D5275B177A9C21009998EE /* DetailView.xib */; };
+		11D5275F177B539C009998EE /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D5275E177B539B009998EE /* TrailerViewController.m */; };
+		11D52761177B53BD009998EE /* TrailerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D52760177B53BC009998EE /* TrailerView.xib */; };
+		11D52763177B6C1E009998EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D52762177B6C1E009998EE /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,10 @@
 		11D52758177A99C4009998EE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		11D52759177A99C4009998EE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		11D5275B177A9C21009998EE /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		11D5275D177B539B009998EE /* TrailerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
+		11D5275E177B539B009998EE /* TrailerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
+		11D52760177B53BC009998EE /* TrailerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrailerView.xib; sourceTree = "<group>"; };
+		11D52762177B6C1E009998EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D52763177B6C1E009998EE /* MediaPlayer.framework in Frameworks */,
 				11D5271217766E5E009998EE /* UIKit.framework in Frameworks */,
 				11D5271417766E5E009998EE /* Foundation.framework in Frameworks */,
 				11D5271617766E5E009998EE /* CoreGraphics.framework in Frameworks */,
@@ -100,6 +108,7 @@
 		11D5271017766E5E009998EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11D52762177B6C1E009998EE /* MediaPlayer.framework */,
 				11D5271117766E5E009998EE /* UIKit.framework */,
 				11D5271317766E5E009998EE /* Foundation.framework */,
 				11D5271517766E5E009998EE /* CoreGraphics.framework */,
@@ -132,6 +141,9 @@
 				11D52758177A99C4009998EE /* DetailViewController.h */,
 				11D52759177A99C4009998EE /* DetailViewController.m */,
 				11D5275B177A9C21009998EE /* DetailView.xib */,
+				11D5275D177B539B009998EE /* TrailerViewController.h */,
+				11D5275E177B539B009998EE /* TrailerViewController.m */,
+				11D52760177B53BC009998EE /* TrailerView.xib */,
 			);
 			path = week4MDF2;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 				11D5274C1778DB1C009998EE /* theater3.png in Resources */,
 				11D5275717794367009998EE /* CustomHeaderViewView.xib in Resources */,
 				11D5275C177A9C21009998EE /* DetailView.xib in Resources */,
+				11D52761177B53BD009998EE /* TrailerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +243,7 @@
 				11D527461778A34A009998EE /* TheaterInfo.m in Sources */,
 				11D5274F17791F4F009998EE /* CustomHeaderLabel.m in Sources */,
 				11D5275A177A99C6009998EE /* DetailViewController.m in Sources */,
+				11D5275F177B539C009998EE /* TrailerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
