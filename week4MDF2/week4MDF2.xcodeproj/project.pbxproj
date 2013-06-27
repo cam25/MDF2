@@ -32,6 +32,8 @@
 		11D5275F177B539C009998EE /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D5275E177B539B009998EE /* TrailerViewController.m */; };
 		11D52761177B53BD009998EE /* TrailerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D52760177B53BC009998EE /* TrailerView.xib */; };
 		11D52763177B6C1E009998EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D52762177B6C1E009998EE /* MediaPlayer.framework */; };
+		11D52765177CBFEE009998EE /* w4Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D52764177CBFED009998EE /* w4Icon.png */; };
+		11D52767177CBFF6009998EE /* w4Iconret.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D52766177CBFF6009998EE /* w4Iconret.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,10 @@
 		11D5275E177B539B009998EE /* TrailerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
 		11D52760177B53BC009998EE /* TrailerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrailerView.xib; sourceTree = "<group>"; };
 		11D52762177B6C1E009998EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		11D52764177CBFED009998EE /* w4Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w4Icon.png; sourceTree = "<group>"; };
+		11D52766177CBFF6009998EE /* w4Iconret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w4Iconret.png; sourceTree = "<group>"; };
+		11D52768177CC009009998EE /* w4Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w4Icon.png; sourceTree = "<group>"; };
+		11D5276A177CC011009998EE /* w4Iconret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w4Iconret.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,8 @@
 		11D5270517766E5E009998EE = {
 			isa = PBXGroup;
 			children = (
+				11D5276A177CC011009998EE /* w4Iconret.png */,
+				11D52768177CC009009998EE /* w4Icon.png */,
 				11D5271717766E5E009998EE /* week4MDF2 */,
 				11D5271017766E5E009998EE /* Frameworks */,
 				11D5270F17766E5E009998EE /* Products */,
@@ -119,6 +127,8 @@
 		11D5271717766E5E009998EE /* week4MDF2 */ = {
 			isa = PBXGroup;
 			children = (
+				11D52766177CBFF6009998EE /* w4Iconret.png */,
+				11D52764177CBFED009998EE /* w4Icon.png */,
 				11D5274B1778DB1B009998EE /* theater3.png */,
 				11D527491778DB15009998EE /* theater2.png */,
 				11D527471778DB0B009998EE /* theater1.png */,
@@ -225,6 +235,8 @@
 				11D5275717794367009998EE /* CustomHeaderViewView.xib in Resources */,
 				11D5275C177A9C21009998EE /* DetailView.xib in Resources */,
 				11D52761177B53BD009998EE /* TrailerView.xib in Resources */,
+				11D52765177CBFEE009998EE /* w4Icon.png in Resources */,
+				11D52767177CBFF6009998EE /* w4Iconret.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
