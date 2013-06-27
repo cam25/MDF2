@@ -10,10 +10,12 @@
 
 @interface CustomHeaderLabel : UIView
 {
+    //variables
     IBOutlet UILabel *theaterName;
     IBOutlet UILabel *theaterLocation;
     IBOutlet UIImageView *theaterImage;
 }
+//properties
 @property (nonatomic,strong) UILabel *theaterName;
 @property (nonatomic,strong) UILabel *theaterLocation;
 @property (nonatomic,strong) UIImageView *theaterImage;

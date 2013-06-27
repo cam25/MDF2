@@ -10,6 +10,8 @@
 #import "TheaterInfo.h"
 @interface MovieInfo : NSObject
 {
+    
+    //variables to hold the data for my object
     NSString *movieIcon;
     NSArray *movieTimes;
     NSString *movieName;
@@ -18,9 +20,13 @@
     
     
 }
-
+//method for my object to pass in my data
 -(id)initWithTitle:(NSString*)icon mshowTimes:(NSArray*)showTimes names:(NSString*)movieTitle trailer:(NSURL*)trailerMov theaterLoc:(TheaterInfo*)theater;
+
+//nsstring function that i have looping through my array of movie times
 - (NSString*)timesForMovies;
+
+//properties
 @property(nonatomic,strong) NSString *movieIcon;
 @property(nonatomic,strong) NSArray *movieTimes;
 @property(nonatomic,strong) NSString *movieName;

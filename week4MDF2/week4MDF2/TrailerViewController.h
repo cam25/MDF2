@@ -13,12 +13,17 @@
 #import "DetailViewController.h"
 @interface TrailerViewController : UIViewController
 {
+    //labels/image views for displaying data
     IBOutlet UILabel *movieTitle;
-    MPMoviePlayerController *moviePlayer;
     IBOutlet UIView *movieView;
     IBOutlet UIImageView *movieImage;
+    
+    //movie player controller to video playback
+    MPMoviePlayerController *moviePlayer;
 }
 -(IBAction)backClick:(id)sender;
 -(IBAction)playStop:(id)sender;
+
+//allows me to access the movieInfo object
 @property (nonatomic,strong)MovieInfo *movieDetails;
 @end

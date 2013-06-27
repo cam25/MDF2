@@ -28,10 +28,13 @@
 
 - (void)viewDidLoad
 {
+    
+    //setting the image url to a data type to be able to show in image view
     NSURL * imageURL = [NSURL URLWithString:movieDetails.movieIcon];
     NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
     UIImage * image = [UIImage imageWithData:imageData];
     
+    //passing of the data from the object to the labels/image view
     detailMovieTitle.text = movieDetails.movieName;
     detailMovieImage.image = image;
     detailShowTimes.text = [movieDetails timesForMovies];
@@ -54,6 +57,7 @@
         TrailerViewController *trailerView = [[TrailerViewController alloc]initWithNibName:@"TrailerView" bundle:nil];
         if (trailerView != nil) {
             
+            //passing my movieDetails data via movieInfo object to the tailer view
             trailerView.movieDetails = movieDetails;
            
             [self presentViewController:trailerView animated:YES completion:nil];

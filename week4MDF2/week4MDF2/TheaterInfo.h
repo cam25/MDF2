@@ -10,14 +10,16 @@
 
 @interface TheaterInfo : NSObject
 {
+    //variables for holding theater data
     NSString *nameOfTheater;
     NSString *locationOfTheater;
     UIImage *theaterImage;
     
 }
-
+//method for passing my data into the object
 -(id)initWithTitle:(NSString*)nameTheater location:(NSString*)theaterLoc image:(UIImage*)theaterPic;
 
+//properties
 @property (nonatomic,strong) NSString *nameOfTheater;
 @property (nonatomic,strong) NSString *locationOfTheater;
 @property (nonatomic,strong) UIImage *theaterImage;

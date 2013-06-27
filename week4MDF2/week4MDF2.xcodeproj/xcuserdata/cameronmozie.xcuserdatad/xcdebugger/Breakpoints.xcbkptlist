@@ -8,20 +8,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "week4MDF2/ViewController.m"
-         timestampString = "393966452.029699"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "week4MDF2/ViewController.m"
-         timestampString = "393966452.029699"
+         timestampString = "394049614.896106"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "119"
@@ -34,11 +21,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "week4MDF2/ViewController.m"
-         timestampString = "393913007.410111"
+         timestampString = "394049614.896106"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
+         startingLineNumber = "120"
+         endingLineNumber = "120"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "week4MDF2/ViewController.m"
+         timestampString = "394049614.896106"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "week4MDF2/TrailerViewController.m"
-         timestampString = "393966631.619259"
+         timestampString = "394049614.896106"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
          landmarkName = "-playStop:"
          landmarkType = "5">
       </FileBreakpoint>

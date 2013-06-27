@@ -10,10 +10,14 @@
 
 @interface CustomTableViewCell : UITableViewCell
 {
+    
+    //variables for custom cell
     IBOutlet UIImageView *movieImage;
     IBOutlet UILabel *movieTitle;
     IBOutlet UILabel *movieTime;
 }
+
+//properties
 @property(nonatomic,strong) UIImageView *movieImage;
 @property(nonatomic,strong) UILabel *movieTitle;
 @property(nonatomic,strong) UILabel *movieTime;

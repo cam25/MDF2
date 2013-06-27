@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad
 {
-     
+    
+    //arrays that will be holding the data from the objects 
     movies = [[NSMutableArray alloc]init];
     movies2 = [[NSMutableArray alloc]init];
     movies3 = [[NSMutableArray alloc]init];
@@ -93,24 +94,7 @@
     [movies3 addObject:movie14];
     [movies3 addObject:movie15];
     
-//    
-//    [allMovies addObject:movie1];
-//    [allMovies addObject:movie2];
-//    [allMovies addObject:movie3];
-//    [allMovies addObject:movie4];
-//    [allMovies addObject:movie5];
-//    [allMovies addObject:movie6];
-//    [allMovies addObject:movie7];
-//    [allMovies addObject:movie8];
-//    [allMovies addObject:movie9];
-//    [allMovies addObject:movie10];
-//    [allMovies addObject:movie11];
-//    [allMovies addObject:movie12];
-//    [allMovies addObject:movie13];
-//    [allMovies addObject:movie14];
-//    [allMovies addObject:movie15];
-    
-    
+    //added theater info objects to an array
     
     [theaters addObject:theater1];
     [theaters addObject:theater2];
@@ -153,58 +137,73 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
+    //loads the nib
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomCellView" owner:self options:nil];
     CustomTableViewCell *cell = (CustomTableViewCell *) [nib objectAtIndex:0];
     
     if (cell != nil) {
+        
+        //if the index path section tag is 0 
         if ([indexPath section] == 0) {
+            
+            //created an info variable in my movieInfo object holding the indexPath of the movies in the first movies array
              MovieInfo *info = [movies objectAtIndex:indexPath.row];
             
+            //allows the image url to be set as a data type and pulled accessed via string for viewing
             NSURL *imageURL = [NSURL URLWithString:info.movieIcon];
             NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
             UIImage *image = [UIImage imageWithData:imageData];
         
        
         //NSLog(@"%@", info);
-        cell.movieTitle.text = info.movieName;
+            
+            //passing of the data to my custom cells on my table view via my movies array at the index of my setter for movie name and image.
+            cell.movieTitle.text = info.movieName;
             cell.movieImage.image = image;
             
+            //setting the movie time to = the index of my timesForMovies function that loops through the arrays of times i have in my movie method and outputs to the movie time label
             cell.movieTime.text = [info timesForMovies];
+            
+            
         //cell.textLabel.text = @"New text";
             
             
         }else if ([indexPath section] == 1)
         {
+             //created an info variable in my movieInfo object holding the indexPath of the movies in the first movies array
             MovieInfo *info2 = [movies2 objectAtIndex:indexPath.row];
             
           
            
-            
+            //passing of the data to my custom cells on my table view via my movies array at the index of my setter for movie name and image.
             NSURL *imageURL = [NSURL URLWithString:info2.movieIcon];
             NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
             UIImage *image = [UIImage imageWithData:imageData];
             
-            
-            //NSLog(@"%@", info);
             cell.movieTitle.text = info2.movieName;
             cell.movieImage.image = image;
             
+            //setting the movie time to = the index of my timesForMovies function that loops through the arrays of times i have in my movie method and outputs to the movie time label
             cell.movieTime.text = [info2 timesForMovies];
             
         }else if ([indexPath section] == 2)
         {
+            
+            //created an info variable in my movieInfo object holding the indexPath of the movies in the first movies array
             MovieInfo *info3 = [movies3 objectAtIndex:indexPath.row];
             
+             //passing of the data to my custom cells on my table view via my movies array at the index of my setter for movie name and image.
             NSURL *imageURL = [NSURL URLWithString:info3.movieIcon];
             NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
             UIImage *image = [UIImage imageWithData:imageData];
-            
             
             //NSLog(@"%@", info);
             cell.movieTitle.text = info3.movieName;
             cell.movieImage.image = image;
             
+            
+            //setting the movie time to = the index of my timesForMovies function that loops through the arrays of times i have in my movie method and outputs to the movie time label
             cell.movieTime.text = [info3 timesForMovies];
             
         }
@@ -215,14 +214,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // NSInteger section = indexPath.row + (indexPath.section * 5);
+   //setting the detail view up
     DetailViewController *detailView = [[DetailViewController alloc]initWithNibName:@"DetailView" bundle:nil];
     if (detailView != nil) {
+     
         
+        //i set a variables in my movies info object to hold the indexpath of each of the arrays to pass into each section
      MovieInfo *info = [movies objectAtIndex:indexPath.row];
      MovieInfo *info2 = [movies2 objectAtIndex:indexPath.row];
      MovieInfo *info3 = [movies3 objectAtIndex:indexPath.row];
         
+        
+        //if the index path of the section is = 0-2 then im passing the movie information to each specific section of the view
         if ([indexPath section] == 0) {
             
              detailView.movieDetails = info;
@@ -243,23 +246,33 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    
     NSArray *header = [[NSBundle mainBundle]loadNibNamed:@"CustomHeaderViewView" owner:self options:nil];
+    
+    //sets the variable view to hold the header
     CustomHeaderLabel *view = (CustomHeaderLabel *) [header objectAtIndex:0];
+    
+    //set the theater variable to be = to my theaters array at the index of the section
     TheaterInfo *theater = [theaters objectAtIndex:section];
     view.backgroundColor = [UIColor redColor];
     if (view) {
+        
+        //if the section == 0,1, or 2 then output the data for each section
         if (section == 0) {
-            
+            //parsing through the theater object and grabbing the image,name, and location from my theater object
             UIImage *images = theater.theaterImage;
             NSString *tName = theater.nameOfTheater;
             NSString *tlocation = theater.locationOfTheater;
             
+            //setting images/location/name to the view
             view.theaterImage.image = images;
             view.theaterLocation.text = tlocation;
             view.theaterName.text = tName;
                         
         }else if (section == 1)
         {
+            
+            //setting the theater object at the index of 1 for second section
             TheaterInfo *theater = [theaters objectAtIndex:1];
             UIImage *images = theater.theaterImage;
             NSString *tName = theater.nameOfTheater;
@@ -271,6 +284,7 @@
             
         }else if (section == 2)
         {
+            //setting the theater object at the index of 2 for the third section
             TheaterInfo *theater = [theaters objectAtIndex:2];
             UIImage *images = theater.theaterImage;
             NSString *tName = theater.nameOfTheater;
@@ -289,6 +303,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    //header height
     return 40;
 }
 

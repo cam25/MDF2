@@ -10,7 +10,10 @@
 
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
+    //variables 
     IBOutlet UITableView *mainTableView;
+    
+    //arrays for storing the data from the objects
     NSMutableArray *movies;
     NSMutableArray *theaters;
     NSMutableArray *movies2;
