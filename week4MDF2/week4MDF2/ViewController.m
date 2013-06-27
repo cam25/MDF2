@@ -25,7 +25,7 @@
     movies = [[NSMutableArray alloc]init];
     movies2 = [[NSMutableArray alloc]init];
     movies3 = [[NSMutableArray alloc]init];
-    allMovies = [[NSMutableArray alloc]init];
+    
     //theater array
     theaters = [[NSMutableArray alloc]init];
     
